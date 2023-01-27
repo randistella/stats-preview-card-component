@@ -15,48 +15,83 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 80px;
     height: 100vh;
     /* border-radius: 10em; 
     overflow: hidden;  something is wrong with getting the corner to round for a flex container*/
+}
+
+img {
+    max-width: 350px;
+    height: auto;
 }
 
 .flex-item {
     background:#1D1939;
     color: #fff;
     /* border: #ccc solid 2px; */
-    text-align: center;
-    min-width: 400px;
-    max-width: 500px;
+    text-align: left;
+    max-width: 350px;
+    height: auto;
 }
 
-.flex-item img {
-    width: 380px;
-    object-fit: cover;
-}
+.flex-item-left {
+    padding: 40px;
+    /* height: 220px; */
 
-.flex-item h2, p {
-    padding: 30px;
-}
+} 
 
 .flex-stat {
     display: inline-block;
     text-align: left;
-    border: 3px yellow solid;
+}
+
+.flex-item p {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #817E97;
+}
+
+.flex-stat .stat {
+    font-size: 9px;
+    font-weight: 400;
+    margin: 0px 35px 0px 0px;
+    color: #817E97;
+}
+
+.flex-item h2 {
+    margin: 0px 0px 20px;
+}
+
+.flex-item p {
+    margin: 0px 0px 50px;
+}
+
+span {
+    color: #A65EDA;
 }
 
 
 
-
-
 /* responsive */
-@media only screen and (max-width: 375px) { 
+@media only screen and (max-width: 768px) { 
 #flex-container {
     flex-direction: column-reverse;
+    padding: 0px;
     }
 
 .flex-stat {
     display: block;
     flex-direction: column;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex-item {
     text-align: center;
 }
 }
