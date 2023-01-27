@@ -1,3 +1,4 @@
+/* utility classes */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,11 +6,22 @@
 }
 
 html, body {
-    font-family: 'Inter', sans-serif;
     font-family: 'Lexend Deca', sans-serif;
     /* background: #000; */
 }
 
+img {
+    max-width: 100%;
+
+    /* max-width: 350px;
+    height: auto; */
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+/* flex container and items */
 #flex-container {
     display: flex;
     flex-direction: row;
@@ -17,26 +29,17 @@ html, body {
     justify-content: center;
     padding: 80px;
     height: 100vh;
-    /* border-radius: 10em; 
-    overflow: hidden;  something is wrong with getting the corner to round for a flex container*/
 }
 
-img {
-    max-width: 350px;
-    height: auto;
-}
-
-.flex-item {
+/* flex item on left */
+.flex-item-left {
+    border-radius: 10px 0px 0px 10px;
+    padding: 45px;
     background:#1D1939;
     color: #fff;
-    /* border: #ccc solid 2px; */
     text-align: left;
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
-}
-
-.flex-item-left {
-    padding: 40px;
     /* height: 220px; */
 
 } 
@@ -46,52 +49,77 @@ img {
     text-align: left;
 }
 
-.flex-item p {
+.stat, .gray-text {
     font-size: 10px;
     font-weight: 400;
-    line-height: 1.7;
     color: #817E97;
 }
 
-.flex-stat .stat {
-    font-size: 9px;
-    font-weight: 400;
-    margin: 0px 35px 0px 0px;
-    color: #817E97;
+.stat {
+    margin: 3px 35px 0px 0px;
+}
+
+.gray-text {
+    margin: 25px 0px 35px;
+    line-height: 1.6;
 }
 
 .flex-item h2 {
     margin: 0px 0px 20px;
 }
 
-.flex-item p {
-    margin: 0px 0px 50px;
-}
-
-span {
+.purple {
     color: #A65EDA;
 }
 
+/* flex-item-right */
+.flex-item-right {
+    color: #fff;
+    text-align: left;
+    max-width: 400px;
+    height: auto;
+    display: flex;
+}
 
+.flex-item-right img {
+    max-width: 100%;
+    border-radius: 0px 10px 10px 0px;
+} 
 
 /* responsive */
 @media only screen and (max-width: 768px) { 
-#flex-container {
-    flex-direction: column-reverse;
-    padding: 0px;
+    #flex-container {
+        flex-direction: column-reverse;
+        padding: 0px;
     }
 
-.flex-stat {
-    display: block;
-    flex-direction: column;
-    text-align: center;
-}
+    .flex-stat{
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
 
-img {
-    max-width: 100%;
-}
+    .stat {
+        margin: 3px 0px 10px;
+    }
 
-.flex-item {
-    text-align: center;
-}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .flex-item-left, .flex-item-right {
+        text-align: center;
+        width: 250px;
+    }
+
+    .flex-item-right img {
+        max-width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .flex-item-left {
+        border-radius: 0px 0px 10px 10px;
+    }
 }
