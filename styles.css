@@ -7,7 +7,7 @@
 
 html, body {
     font-family: 'Lexend Deca', sans-serif;
-    /* background: #000; */
+    background: #000;
 }
 
 img {
@@ -38,7 +38,7 @@ h2 {
     background:#1D1939;
     color: #fff;
     text-align: left;
-    max-width: 400px;
+    width: 400px;
     height: auto;
     /* height: 220px; */
 
@@ -76,13 +76,13 @@ h2 {
 .flex-item-right {
     color: #fff;
     text-align: left;
-    max-width: 400px;
     height: auto;
     display: flex;
 }
 
 .flex-item-right img {
-    max-width: 100%;
+    width: 355px;
+    height: auto;
     border-radius: 0px 10px 10px 0px;
 } 
 
@@ -111,7 +111,7 @@ h2 {
 
     .flex-item-left, .flex-item-right {
         text-align: center;
-        width: 250px;
+        width: 275px;
     }
 
     .flex-item-right img {
@@ -120,6 +120,7 @@ h2 {
     }
 
     .flex-item-left {
+        max-width: 100%;
         border-radius: 0px 0px 10px 10px;
     }
 }
